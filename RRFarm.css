@@ -3,7 +3,7 @@ header {
 }
 
 .pics {
-  width: 21%;
+  width: 21.3%;
   clear: both;
   min-width: 100px;
 }
@@ -13,7 +13,7 @@ header {
   height: 99%;
   border-color: #b1bbec;
   border-style: solid;
-  border-width: 6px;
+  border-width: 6.9px;
 }
 
 .name {
@@ -33,10 +33,11 @@ header {
 .cart img {
   border-color: #b1bbec;
   border-style: solid;
-  border-width: 6px;
+  border-width: 6.9px;
   width: 99%;
   height: 99%;
 }
+
 h1 {
   font-size: 3.9vw;
   font-family: "Trade Winds";
@@ -65,9 +66,8 @@ body {
   background-color: white;
   min-width: 480px;
 
-height: 99%;
+  height: 99%;
 }
-
 
 #wrapper {
   background-image: url(backgroundlogo.png);
@@ -87,13 +87,13 @@ height: 99%;
 
 nav {
   box-sizing: border-box;
-  font-size: 2.1vw;
+  font-size: 1.9vw;
   font-family: "Trade Winds";
   background-color: #b1bbec;
   border-color: #88cf71;
   opacity: 99%;
   border-style: solid;
-  border-width: 3px;
+  border-width: 6px;
   position: sticky;
   top: 6%;
   text-wrap: nowrap;
@@ -147,14 +147,14 @@ h2 {
   opacity: 93%;
   border-color: #88cf71;
   border-style: solid;
-  border-width: 3px;
-  border-radius: 33%;
+  border-width: 6px;
+  border-radius: 45%;
   text-align: center;
   font-size: x-large;
   background-color: #b1bbec;
   clear: both;
   max-width: 81%;
-  margin: 3%;
+  margin: 6%;
   padding: 6%;
 }
 
@@ -165,15 +165,44 @@ h2 {
   border-style: solid;
   border-width: 6px;
   background-color: #b1bbec;
-  padding: 6px;
+  padding: 3px;
   width: 27%;
   margin-left: 3%;
-  
+  position: relative;
+  overflow: hidden;
+  font-size: 1.8vw;
+  text-align: center;
 }
 .vertical img {
   margin: 6%;
   width: 90%;
   height: 90%;
+}
+.hoverContent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 99%;
+  height: 99%;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  display: flex;
+  align-items: center;
+  font-size: 1.8vw;
+
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.9s ease;
+  pointer-events: none;
+}
+
+.vertical:hover img {
+  filter: grayscale(9%);
+  color: black;
+}
+
+.vertical:hover .hoverContent {
+  opacity: 1;
 }
 
 footer {
@@ -192,16 +221,12 @@ footer {
 }
 
 th {
-  box-sizing: border-box;
-
   padding: 1%;
 
   text-align: center;
   border-style: solid;
 }
 tbody {
-  box-sizing: border-box;
-
   padding: 1%;
   text-align: center;
 
@@ -217,13 +242,10 @@ tr td {
 table {
   table-layout: fixed;
 
-  box-sizing: border-box;
-
   background-color: #b1bbec;
   opacity: 93%;
 
   border-collapse: collapse;
-  clear: both;
   width: 90%;
 
   min-width: 50%;
@@ -238,7 +260,7 @@ input {
   padding-top: 3%;
   padding-bottom: 3%;
   display: table-cell;
-  margin-bottom: 3%px;
+  margin-bottom: 3%;
 }
 
 label {
@@ -259,13 +281,11 @@ fieldset {
   flex-direction: column;
 }
 
-legend {
-  margin: 1%;
-  font-size: larger;
-  color: black;
+ul {
+  text-align: center;
 }
-
 ul li {
+  text-align: center;
   list-style-type: none;
 }
 
@@ -317,6 +337,17 @@ section.hours {
   height: 81%;
   margin: 6%;
   margin-left: 9%;
+  position: relative;
+  overflow: hidden;
+}
+
+.contactVertical:hover img {
+  filter: grayscale(50%);
+  color: black;
+}
+
+.contactVertical:hover .hoverContent {
+  opacity: 1;
 }
 
 .contactVertical img {
@@ -360,10 +391,22 @@ h3 {
   margin-left: 1%;
   height: 21%;
   display: inline-block;
+  position: relative;
+  overflow: hidden;
+  font-size: 1.8vw;
 }
 .verticalStore img {
   width: 99%;
   height: 90%;
+}
+
+.verticalStore:hover img {
+  filter: grayscale(1%);
+  color: black;
+}
+
+.verticalStore:hover .hoverContent {
+  opacity: 1;
 }
 
 .verticalBox {
@@ -377,35 +420,59 @@ h3 {
   margin-left: 1%;
   height: 21%;
   display: inline-block;
+  position: relative;
+  overflow: hidden;
 }
+
+.verticalBox:hover img {
+  filter: grayscale(50%);
+  color: black;
+}
+
+.verticalBox:hover .hoverContent {
+  opacity: 1;
+}
+
 .verticalBox img {
   width: 99%;
   height: 90%;
 }
 
 .boxtalk {
-  margin: 0.9%;
-  font-size: 1.2vw;
+  font-size: 2.1vw;
 
+  margin: 1%;
   border-color: #88cf71;
   border-style: solid;
   border-width: 6px;
   background-color: #b1bbec;
-  padding: 6px;
   width: 21%;
-  margin-left: 1%;
-  height: 21%;
+  overflow: hidden;
+  position: relative;
+  opacity: 93%;
+
   display: inline-block;
-  box-sizing: border-box;
 }
 
-  
+@media screen and (max-width: 1024px) {
+  .vertical {
+    width: 27vw;
+    max-width: 99%;
+    box-sizing: border-box;
+  }
+}
 
-
+@media screen and (max-width: 900px) {
+  .vertical {
+    width: 40vw;
+    max-width: 99%;
+    box-sizing: border-box;
+  }
+}
 
 @media screen and (max-width: 768px) {
   .vertical {
-    width: 27vw;
+    width: 40vw;
     max-width: 99%;
     box-sizing: border-box;
   }
@@ -413,41 +480,17 @@ h3 {
 
 @media screen and (max-width: 480px) {
   .vertical {
-    width: 27vw;
-    max-width: 99%;
+    width: 50vw;
     box-sizing: border-box;
   }
 }
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 400px) {
   .vertical {
     width: 54vw;
     max-width: 99%;
     max-height: 99%;
     box-sizing: border-box;
   }
-}
-
-@media screen and (max-width: 768px) {
-  .verticalBox {
-    width: 42vw;
-    max-width: 99%;
-    box-sizing: border-box;
-  }
-}
-@media screen and (max-width: 480px) {
-  .verticalBox {
-    width: 55vw;
-    max-width: 99%;
-    box-sizing: border-box;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-    .verticalBox {
-      width: 27vw;
-      max-width: 99%;
-      box-sizing: border-box;
-    }
 }
 
 @media screen and (max-width: 768px) {
@@ -465,11 +508,38 @@ h3 {
   }
 }
 @media screen and (max-width: 1024px) {
-    .verticalStore {
-      width: 27vw;
-      max-width: 99%;
-      box-sizing: border-box;
-    }
+  .verticalStore {
+    width: 27vw;
+    max-width: 99%;
+    box-sizing: border-box;
   }
+}
 
-  
+@media screen and (max-width: 400px) {
+  .verticalStore {
+    width: 36vw;
+    max-width: 99%;
+    box-sizing: border-box;
+  }
+}
+
+.aboutVertical {
+  clear: both;
+
+  width: 90%;
+  height: 72%;
+  margin: 6%;
+  margin-left: 9%;
+  position: relative;
+  overflow: hidden;
+}
+
+.aboutVertical img {
+  background-color: #b1bbec;
+  padding: 6px;
+  border-color: #88cf71;
+  border-style: solid;
+  border-width: 6px;
+  width: 90%;
+  height: 90%;
+}
